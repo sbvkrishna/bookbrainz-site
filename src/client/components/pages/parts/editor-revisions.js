@@ -21,6 +21,8 @@
 
 import * as bootstrap from 'react-bootstrap';
 import * as utilsHelper from '../../../helpers/utils';
+
+import CallToAction from './call-to-action';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -64,7 +66,10 @@ function EditorRevisionsTab(props) {
 				<ListGroup>
 					{revisions.map(renderRevision)}
 				</ListGroup> :
-				<h4> No revision to show</h4>
+				<div>
+					<h4> No revisions to show</h4>
+					<CallToAction/>
+				</div>
 			}
 		</div>
 	);
